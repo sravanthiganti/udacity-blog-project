@@ -1,0 +1,8 @@
+@import url(blogpost.css);
+@import url(typography.css)
+
+/*global styles and page layout*/
+body{
+    margin: 0;
+    background: white
+}

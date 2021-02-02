@@ -106,7 +106,7 @@ blockquote{
     padding: 2rem;
 }
 
-.sidebar
+.sidebar{
     max-width: 80%;
 }
 
@@ -116,4 +116,34 @@ blockquote{
 }
 
 /*bio section*/
+#intro{
+justify-content: flex-start;
+padding-top: 5rem;
+max-width: 80%;
+grid-row-start: 2;
+margin-top: 3rem;
+z-index: -1;
+}
 
+#icon{
+    max-width: 70%;
+}
+
+.intro-image{
+    display: flex;
+    justify-content: center;
+    margin: auto 0;
+    max-width: 100%;
+}
+
+.author-intro{
+    max-width: 100%;
+}
+
+ /* social */
+ #share {
+    grid-row-start: 2;
+    width: 80%;
+}
+
+}
