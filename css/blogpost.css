@@ -1,7 +1,7 @@
 .blog-container{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 50px 1fr min-content;
+    grid-template-rows: 100px 50px 1fr min-content min-content 50px;
     grid-template-areas:
     "hd hd"
     "nav nav"
@@ -20,9 +20,10 @@ article{
  display:flex;
  flex-direction: column;
  align-items: center;
- background-color: beige;
+ background-color: white;
  padding:1rem;
- box-shadow: 2px 2px 6px burlywood;   
+ box-shadow: 2px 2px 6px grey; 
+ margin: 1rem;  
 }
 .blogpost-img {
     width: 80%;
@@ -32,8 +33,7 @@ article{
     font-size: 1.1em;
 }
 blockquote{
-    border-left:2px solid darkkhaki;
-    border-bottom:2px solid darkkhaki;
+    border-left: 2px solid darkkhaki;
     padding:0.5rem;
     font-size: 1.1em;
 }
@@ -72,6 +72,7 @@ blockquote{
 }
 
 .intro-image{
+    display:flex;
     justify-content: center;
     margin: auto 0;
     max-width: 100%; 
@@ -81,10 +82,10 @@ blockquote{
     max-width: 100%;
 }
 
-#icon {
+#intro-icon {
     width: 50%;
     border-radius: 50%;
-    border: 6px solid #66d7d1;
+    border: 6px solid rgb(5, 64, 71);
 }
 
 /* responsive layout */
@@ -95,7 +96,7 @@ blockquote{
         grid-template-areas: 
             "hd hd hd hd hd hd hd hd"
             "main main main main main main nav nav"
-            "main main main main main main bio bio"
+            "main main main main main main intro intro"
             "main main main main main main share share"
             "ft ft ft ft ft ft ft ft";
     }
@@ -129,14 +130,14 @@ z-index: -1;
     max-width: 70%;
 }
 
-.intro-image{
+.intro-icon{
     display: flex;
     justify-content: center;
     margin: auto 0;
     max-width: 100%;
 }
 
-.author-intro{
+.intro-image{
     max-width: 100%;
 }
 

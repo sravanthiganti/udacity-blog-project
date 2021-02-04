@@ -1,8 +1,235 @@
 @import url(blogpost.css);
-@import url(typography.css)
+@import url(typography.css);
 
 /*global styles and page layout*/
 body{
     margin: 0;
-    background: white
+    background: white;
+    color:black;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a.active, a:hover{
+    text-decoration: underline;
+    color: purple;
+}
+
+nav{
+    z-index: 1;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 50px 1fr 50px;
+    grid-template-areas: 
+    "hd hd"
+    "nav nav"
+    "main main"
+    "ft ft";
+    justify-content: center;
+}
+
+/*header*/
+header{
+    grid-area: hd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-title{
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.header-subtitle{
+    font-weight:lighter;
+    font-size: 1.2em;
+}
+
+/*navigation & sidebar*/
+nav{
+    grid-area: nav;
+    display: flex;
+    padding: 1rem 0;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin: 1rem;
+}
+
+.sidebar-pages{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.nav-sidebar{
+    display: none;
+}
+
+.nav-link{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link:hover, .nav-link:active{
+    text-decoration: underline;
+    color: purple;
+}
+
+.sidebar-list{
+    list-style: none;
+    line-height: 1.7;
+}
+
+.sidebar-list-item{
+    margin-left: -2.5rem;
+}
+
+/*content*/
+#main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content;
+    grid-template-areas:
+    "post-top"
+    "post-middle";
+}
+
+#section-1{
+    grid-area: post-top;
+}
+
+#section-2{
+    grid-area: post-middle;
+}
+
+.blog-image{
+    width: 100%;
+    object-fit: cover;
+}
+
+.front-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    box-shadow: 2px 2px 6px grey;
+    background: white;
+    border-radius: 1%;
+    max-width: 90%;
+}
+
+.front-image-text{
+    padding: 1rem;
+}
+
+.front-image:hover{
+    box-shadow: 2px 2px 6px 2px grey;
+}
+
+/*button styles*/
+.button{
+    padding: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor:zoom-in;
+    color:black;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 0.7em;
+}
+
+.btn-activate, .button:hover{
+    box-shadow: 2px 2px 2px aquamarine;
+    text-decoration: none;
+}
+
+/*footer*/
+footer{
+    grid-area: ft;
+    text-align: center;
+}
+
+.heart{
+    color: brown;
+}
+
+/* responsive layout */
+@media(min-width: 900px) {
+    .container {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 100px 1fr 50px;
+        grid-template-areas: 
+            "hd hd hd hd hd hd hd hd"
+            "main main main main main main nav nav"
+            "ft ft ft ft ft ft ft ft";
+    }
+
+    #main {
+        grid-template-rows: 50% 50%;
+    }
+
+
+/* navigation and sidebar */
+nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: none;
+    margin: 2rem 0;
+}
+
+.nav-hide {
+    display: none;
+}
+
+.nav-sidebar {
+    display: block;
+}
+
+.sidebar-pages {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0.5rem 0 2rem;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.nav-link {
+    padding: 1rem;
+}
+
+.sidebar-list-item {
+    border-bottom: 1px dotted grey;
+}
+
+/*content*/
+.front-image{
+    flex-direction: row;
+    margin: 3rem;
+    padding: 0;
+}
+
+.front-image-text{
+    padding: 2rem;
+}
+
+.blog-image{
+    max-width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+}
+
