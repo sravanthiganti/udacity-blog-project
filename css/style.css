@@ -4,7 +4,7 @@
 /*global styles and page layout*/
 body{
     margin: 0;
-    background: white;
+    background: rgba(245, 245, 245, 0.521);
     color:black;
 }
 
@@ -151,7 +151,7 @@ nav{
 }
 
 .btn-activate, .button:hover{
-    box-shadow: 2px 2px 2px aquamarine;
+    box-shadow: 2px 2px 2px rgb(236, 27, 225);
     text-decoration: none;
 }
 
@@ -232,4 +232,5 @@ nav {
     object-fit: cover;
 }
 }
+
 
