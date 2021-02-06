@@ -1,5 +1,5 @@
 /*header*/
-header{
+header {
     grid-area: hd;
     display: flex;
     justify-content: center;
@@ -7,12 +7,12 @@ header{
     flex-direction: column;
 }
 
-.header-title{
+.header-title {
     text-transform: uppercase;
     font-weight: lighter;
 }
 
-.header-subtitle{
-    font-weight:lighter;
+.header-subtitle {
+    font-weight: lighter;
     font-size: 1.2em;
 }
