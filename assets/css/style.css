@@ -1,5 +1,6 @@
 @import url(blogpost.css);
 @import url(typography.css);
+@import url(header.css);
 
 /*global styles and page layout*/
 body{
@@ -34,24 +35,6 @@ nav{
     justify-content: center;
 }
 
-/*header*/
-header{
-    grid-area: hd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.header-title{
-    text-transform: uppercase;
-    font-weight: lighter;
-}
-
-.header-subtitle{
-    font-weight:lighter;
-    font-size: 1.2em;
-}
 
 /*navigation & sidebar*/
 nav{
